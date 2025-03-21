@@ -31,12 +31,12 @@ frontend allia-wase-frontend-http
     default_backend allia-wase-backend
 
 frontend allia-wase-frontend-https
-    bind *:443 ssl crt /etc/haproxy/certs/www.supserrr.tech.pem
+    bind *:443 ssl crt /etc/haproxy/certs/www.allia-wase.tech.pem
     mode http
     default_backend allia-wase-backend
 
 backend allia-wase-backend
     balance roundrobin
-    server web-01 3.86.231.113:80 check
-    server web-02 3.83.164.61:80 check
+    server web-01 3.83.150.63 check
+    server web-02 54.152.152.232 check
 EOL
